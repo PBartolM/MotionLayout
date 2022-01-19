@@ -8,13 +8,35 @@
         motion:constraintSetStart="@id/start"
         motion:duration="1000">
        <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/textView"
+               motion:framePosition="50"
+               android:rotationY="360" />
+           <KeyAttribute
+               motion:motionTarget="@+id/botonGrande"
+               motion:framePosition="50"
+               android:scaleX="3" />
+           <KeyAttribute
+               motion:motionTarget="@+id/botonGrande"
+               motion:framePosition="50"
+               android:scaleY="3" />
+           <KeyAttribute
+               motion:motionTarget="@+id/alfalfa"
+               motion:framePosition="50"
+               android:alpha="0.5" />
+           <KeyPosition
+               motion:motionTarget="@+id/botonInicio"
+               motion:framePosition="50"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.519"
+               motion:percentY="0.326" />
        </KeyFrameSet>
-        <OnClick motion:targetId="@id/textView" />
+        <OnClick motion:targetId="@id/botonInicio" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            motion:layout_constraintVertical_bias="0.96"
+            motion:layout_constraintVertical_bias="0.30"
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintBottom_toBottomOf="parent"
@@ -26,7 +48,7 @@
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            motion:layout_constraintVertical_bias="0.035"
+            motion:layout_constraintVertical_bias="0.30"
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintBottom_toBottomOf="parent"
@@ -41,5 +63,14 @@
                 motion:attributeName="backgroundColor"
                 motion:customColorValue="@color/purple_200" />
         </Constraint>
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_marginTop="492dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="284dp"
+            android:layout_marginStart="284dp"
+            android:id="@+id/botonInicio" />
     </ConstraintSet>
 </MotionScene>
